@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Report</title>
+    <link rel="stylesheet" href="../styles/report.css">
+    <script defer src="../scripts/report.js"></script>
+
+</head>
+<body>
+    <!-- Header part -->
+    <header>
+        <h1> Report Generation Module </h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="supplier.html">Supplier</a>
+            <a href="packaging.html">Packaging</a>
+            <a href="sales.html">Sales</a>
+            <a href="financial.html">Financial</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="report.html">Report</a>
+        </nav>
+    </header>
+
+    <!-- Main part -->
+    <main>
+        <!-- Report controls -->
+        <section class="report-controls">
+            <h2>Report Parameters</h2>
+            <form id="reportForm">
+                <div class="form-group">
+                    <label for="reportPeriod">Select Period:</label>
+                    <select id="reportPeriod">
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate">
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="generateReport">Generate Report</button>
+                    <!-- <button type="button" id="saveReport">Save Report</button> -->
+                    <button type="button" id="exportReport">Export Report</button>
+                    <button type="button" id="printReport">Print Report</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Report results -->
+        <section class="report-results">
+            <div class="financial-summary">
+                <h2>Financial Summary</h2>
+                <div id="financialMetrics"></div>
+            </div>
+
+            <div class="sales-analysis">
+                <h2>Sales Analysis</h2>
+                <div id="salesMetrics"></div>
+            </div>
+
+            <div class="stock-status">
+                <h2>Current Stock Status</h2>
+                <div id="stockMetrics"></div>
+            </div>
+
+            <div class="tax-analysis">
+                <h2>Tax Analysis</h2>
+                <div id="taxMetrics"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blueberry Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

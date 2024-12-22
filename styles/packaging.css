@@ -1,0 +1,417 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(135deg, #2c3e50, #616466, #2c3e50);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+/* Market Demand Section */
+.seasonal-offer {
+    background: linear-gradient(135deg, #8d3306, #bb090c);
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.seasonal-banner {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.seasonal-content {
+    flex: 1;
+}
+
+.seasonal-content h2 {
+    margin: 0;
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.offer-details {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.discount-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.discount-highlights li {
+    margin: 5px 10px;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.validity {
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Purchase Records Section */
+#purchaseRecordsSection {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#purchaseRecordsSection p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#purchaseRecordsSection span {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Alert Section */
+.alert-section {
+    background: linear-gradient(to right, #8d1f1f, #8e0a0a);
+    border: 2px solid #8e0a0a;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.alert-message {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-button {
+    width: fit-content;
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Inventory Section */
+#inventorySection {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Packaged Categories Section */
+#packagingCategoriesSection {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Categorization Section */
+#categorizationSection {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#categorizationSection form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#categorizationSection select,
+#categorizationSection input {
+    width: 50%;
+    margin-right: 10px;
+}
+
+#customWeightInput {
+    display: none;
+}
+
+#categorizationSection button {
+    width: 30%;
+    margin-top: 20px;
+}
+
+#packagingSummary {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#packagingSummary li {
+    margin: 8px 0;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Pricing Section */
+#pricingSection {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pricingSection th {
+    background-color: #f2f2f2;
+}
+
+#pricingSection td {
+    font-size: 14px;
+}
+
+#pricingSection button {
+    margin-top: 10px;
+    background-color: #c6580f;
+}
+
+#pricingSection button:hover {
+    background-color: #d35400;
+}
+
+#pricingSection button.editPriceBtn {
+    margin-top: 5px;
+    color: white;
+    background-color: #e74c3c;
+    padding: 5px 10px;
+}
+
+#pricingSection button.editPriceBtn:hover {
+    background-color: #c0392b;
+}
+
+/* Common Form Elements */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Button Styles */
+button {
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #2c3e50;
+}
+
+.alert-button {
+    background-color: white;
+    width: fit-content;
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid transparent;
+}
+
+.alert-button a {
+    color: #2c3e50;
+}
+
+.alert-button:hover {
+    background-color: #eea9a9;
+}
+
+#editOfferDate {
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid transparent;
+    color: white;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+button#checkStockBtn,
+button#generateReportBtn,
+button#viewMinStocks {
+    background-color: #8e0a0a;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Price Status Indicators */
+.price-increased {
+    color: #e74c3c;
+}
+
+.price-decreased {
+    color: #27ae60;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+    }
+    nav a {
+        width: 100%;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    .seasonal-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .seasonal-icon {
+        margin: 0 0 15px 0;
+    }
+
+    .discount-highlights {
+        flex-direction: column;
+    }
+
+    .discount-highlights li {
+        margin: 5px 0;
+    }
+
+    footer {
+        padding: 0.8rem 0;
+    }
+    table  {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        display: block;
+        /* Stack nav items vertically on small screens */
+    }
+}

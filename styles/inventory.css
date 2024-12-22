@@ -1,0 +1,289 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+}
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(135deg, #2c3e50, #616466, #2c3e50);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Main Content Container */
+main {
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* Common Section Styles */
+.inventory-section,
+.forecast-section,
+.reports-section,
+.alerts-section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Inventory Section Styles */
+.raw-materials-row {
+    background-color: #e3f2fd;
+    font-weight: bold;
+}
+
+.separator-row {
+    background-color: #f8f9fa;
+}
+
+/* Inventory Actions Styles */
+.inventory-actions {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.action-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.action-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-card.low-stock {
+    background: #fb7e7e;
+}
+
+.action-card.restock {
+    background: #a9d2f9;
+}
+
+.action-card h4 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Forecast Section Styles */
+.forecast-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-table th,
+.forecast-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.forecast-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.forecast-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Reports Section Styles */
+.report-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Alerts Section Styles */
+.alerts-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.alert-item {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-warning { background-color: #fff3cd; }
+.alert-danger { background-color: #f8d7da; }
+.alert-info { background-color: #e8f4f8; }
+
+.alert-item h4 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+}
+
+.alert-item p {
+    margin: 0.25rem 0;
+    color: #495057;
+}
+
+/* Common Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Status Indicators */
+.status-normal {
+    color: #28a745;
+}
+
+.status-warning {
+    color: #ffc107;
+}
+
+.status-critical {
+    color: #dc3545;
+}
+
+/* Common Form Elements */
+select, button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #122c47;
+}
+
+.action-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #2c3e50;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+    }
+    nav a {
+        width: 100%;
+        align-items: center;
+        margin: 5px 0;
+    }
+    .forecast-controls,
+    .report-controls {
+        flex-direction: column;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    footer {
+        padding: 0.8rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        display: block;
+        /* Stack nav items vertically on small screens */
+    }
+}
+

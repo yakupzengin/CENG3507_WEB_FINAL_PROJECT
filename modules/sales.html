@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Management</title>
+    <link rel="stylesheet" href="../styles/sales.css">
+
+    <script src="../scripts/sale_module.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- Header part -->
+    <header>
+        <h1>Sales Management</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="supplier.html">Supplier</a>
+            <a href="packaging.html">Packaging</a>
+            <a href="sales.html">Sales</a>
+            <a href="financial.html">Financial</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="report.html">Report</a>
+        </nav>
+    </header>
+
+    <!-- Main part -->
+    <main>
+        <!-- Discount notifications -->
+        <div id="discountNotifications" class="discount-notifications"></div>
+
+        <!-- Adding order -->
+        <section id="newOrderSection">
+            <h2>New Order</h2>
+            <form id="orderForm">
+                <div class="customer-details">
+                    <h3>Customer Information</h3>
+                    <input type="text" id="customerName" placeholder="Customer Name" required>
+                    <input type="tel" id="customerContact" placeholder="Contact Number" required>
+                    <textarea id="shippingAddress" placeholder="Shipping Address" required></textarea>
+                </div>
+
+                <div class="order-details">
+                    <h3>Order Details</h3>
+                    <select id="blueberryType" required>
+                        <option value="">Select Blueberry Type</option>
+                        <option value="Fresh">Fresh</option>
+                        <option value="Frozen">Frozen</option>
+                        <option value="Organic">Organic</option>
+                    </select>
+                    <select id="productCategory" required>
+                        <option value="">Select Package Size</option>
+                    </select>
+                    <input type="number" id="orderQuantity" placeholder="Quantity" min="1" required>
+                    <p>Total Price: $<span id="totalPrice">0.00</span></p>
+                    <p>Available Quantity: <span id="availableQuantity">0</span> packages</p>
+                </div>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+
+        <!-- Order Management -->
+        <section id="orderManagementSection">
+            <h2>Order Management</h2>
+            <div class="filters">
+                <input type="text" id="searchOrder" placeholder="Search orders...">
+                <select id="statusFilter">
+                    <option value="">All Statuses</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Processed">Processed</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                </select>
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <!-- Will be populated dynamically -->
+                </select>
+            </div>
+            <table id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Revenue Reports -->
+        <section id="revenueSection">
+            <h2>Revenue Reports</h2>
+            <div class="report-filters">
+                <select id="reportType">
+                    <option value="category">By Category</option>
+                    <option value="customer">By Customer</option>
+                    <option value="time">By Time Period</option>
+                </select>
+                <button id="generateReport">Generate Report</button>
+                <button id="exportReport">Export CSV Report </button>
+            </div>
+            <div id="revenueCharts"></div>
+            <div id="revenueSummary"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Blueberry Factory Management System &copy; 2024</p>
+      </footer>
+</body>
+
+</html>

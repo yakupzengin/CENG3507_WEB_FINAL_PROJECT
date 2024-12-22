@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis</title>
+    <link rel="stylesheet" href="../styles/financial.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../scripts/financial.js" defer></script>
+</head>
+
+<body>
+    <!-- Header part -->
+    <header>
+        <h1>Financial Analysis Module</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="supplier.html">Supplier</a>
+            <a href="packaging.html">Packaging</a>
+            <a href="sales.html">Sales</a>
+            <a href="financial.html">Financial</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="report.html">Report</a>
+        </nav>
+    </header>
+    <!-- Main part -->
+    <main>
+
+        <!-- Report Controls Section -->
+        <section class="report-controls">
+            <h2>Report Generation</h2>
+            <div class="control-panel">
+                <div class="period-selector">
+                    <label for="periodSelect">Select Period:</label>
+                    <select id="periodSelect">
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+                <div class="date-range">
+                    
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" required>
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" required>
+                </div>
+                <div class="actions">
+                    <button id="generateReport">Generate Report</button>
+                    <button id="exportReport">Export Report</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="reportContainer" class="report-display">
+            <!-- Report content will be dynamically inserted here -->
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>Blueberry Factory Management System &copy; 2024</p>
+      </footer>
+</body>
+
+</html>

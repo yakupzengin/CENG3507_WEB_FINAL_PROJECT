@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="../styles/inventory.css">
+    <script src="../scripts/inventory.js" defer></script>
+</head>
+<body>
+
+    <!-- Header part -->
+    <header>
+        <h1>Inventory Management</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="supplier.html">Supplier</a>
+            <a href="packaging.html">Packaging</a>
+            <a href="sales.html">Sales</a>
+            <a href="financial.html">Financial</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="report.html">Report</a>
+        </nav>
+    </header>
+
+    <!-- Main part -->
+    <main>
+        <!-- Real-Time Stock Tracking -->
+        <section class="inventory-section">
+            <h2>Current Inventory Status</h2>
+            <div class="stock-display">
+                <table id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Quantity</th>
+                            <th>Reorder Level</th>
+                            <th>Storage Location</th>
+                            <th>Last Restock</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryBody"></tbody>
+                </table>
+            </div>
+            
+            <!-- Add new inventory actions section -->
+            <div class="inventory-actions">
+                <h3>Inventory Actions</h3>
+                <div class="action-cards">
+                    <div class="action-card low-stock">
+                        <h4>Low Stock Alert</h4>
+                        <p>Some items are below reorder level</p>
+                        <button onclick="window.location.href='packaging.html#categorizationSection'" class="action-button">
+                            Package More Items
+                        </button>
+                    </div>
+                    <div class="action-card restock">
+                        <h4>Scheduled Restocking</h4>
+                        <p>Next restock date: <span id="nextRestockDate"></span></p>
+                        <button id="setRestockDate" class="action-button">Set Restock Date</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demand Forecasting -->
+        <section class="forecast-section">
+            <h2>Demand Forecast</h2>
+            <div class="forecast-controls">
+                <select id="forecastPeriod">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+                <button id="generateForecast">Generate Forecast</button>
+            </div>
+            <div id="forecastResults" class="forecast-results"></div>
+        </section>
+
+        <!-- Inventory Reports -->
+        <section class="reports-section">
+            <h2>Inventory Reports</h2>
+            <div class="report-controls">
+                <select id="reportType">
+                    <option value="summary">Summary Report</option>
+                    <option value="turnover">Turnover Analysis</option>
+                    <!-- <option value="alerts">Low Stock Alerts</option> -->
+                </select>
+                <button id="generateReport">Generate Report</button>
+                <!-- <button id="exportReport">Export Report</button> -->
+            </div>
+            <div id="reportResults" class="report-results"></div>
+        </section>
+
+        <!-- Stock Alerts -->
+        <section class="alerts-section">
+            <h2>Stock Alerts</h2>
+            <div id="alertsContainer" class="alerts-container"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Blueberry Factory Management System &copy; 2024</p>
+    </footer>
+</body>
+</html>

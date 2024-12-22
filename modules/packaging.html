@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/packaging.css">
+
+    <script src="../scripts/packaging.js" defer></script>
+
+    <title>Product Packaging</title>
+</head>
+
+<body>
+    
+    <!-- Header part -->
+    <header>
+        <h1>Product Packaging</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="supplier.html">Supplier</a>
+            <a href="packaging.html">Packaging</a>
+            <a href="sales.html">Sales</a>
+            <a href="financial.html">Financial</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="report.html">Report</a>
+        </nav>
+    </header>
+
+    <!-- Main part -->
+    <main>
+        <!-- New Market Demand Section -->
+        <section id="marketDemandSection" class="seasonal-offer">
+            <div class="seasonal-banner">
+                <div class="seasonal-content">
+                    <h2>Black Friday ! </h2>
+                    <p class="highlight-text">Incredible 50% OFF on All Packages!</p>
+                    <div class="offer-details">
+                        <p>Don't miss out on our biggest sale of the year! </p>
+                        <ul class="discount-highlights">
+                            <li>Exclusive Black Friday Deals</li>
+                            <li>All Package Sizes Included</li>
+                            <li>Biggest Savings of the Year</li>
+                        </ul>
+                        <p class="validity">Valid until : <span id="offerEndDate">December 30, 2024</span></p>
+                        <button id="editOfferDate" > Edit </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purchase Records Section -->
+        <section id="purchaseRecordsSection">
+            <p>All times total raw blueberries weight : <span id="totalWeight"></span></p>
+
+            <p>Remaining Unpackaged: <span id="remainingUnpackaged"></span></p>
+
+            <div id="lowStockAlert" style="display: none;" class="alert-section">
+                <p class="alert-message">⚠️ Raw material stock is getting low! Consider purchasing more blueberries.</p>
+                <button class="alert-button">
+                    <a href="supplier.html#purchaseForm" >Go to Purchase Records</a>
+                </button>
+            </div>
+        </section>
+
+        <!-- Inventory Tracking Section -->
+        <section id="inventorySection">
+            <h2>Inventory Tracking</h2>
+            <button id="viewMinStocks">View min stocks </button>
+            <button id="checkStockBtn">Check Stock Levels</button>
+            <button id="generateReportBtn">Generate Inventory Report</button>
+        </section>
+        
+        <!-- Packaging Categories Section -->
+        <section id="packagingCategoriesSection">
+            <h2>Packaged Categories</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Package Size</th>
+                        <th>Blueberry Type</th>
+                        <th>Quantity</th>
+                        <th>Total Weight (kg)</th>
+                        <th>Price ($)</th>
+                    </tr>
+                </thead>
+                <tbody id="packagedCategoriesTable"></tbody>
+            </table>
+        </section>
+        
+        <!-- Categorization Section -->
+        <section id="categorizationSection">
+            <h2>Package Blueberries</h2>
+            <form id="categorizationForm">
+                <label for="category">Select Category:</label>
+                <select id="category" required>
+                    <option value="100">Small (100g)</option>
+                    <option value="250">Medium (250g)</option>
+                    <option value="500">Large (500g)</option>
+                    <option value="1000">Extra Large (1kg)</option>
+                    <option value="2000">Family Pack (2kg)</option>
+                    <option value="5000">Bulk Pack (5kg)</option>
+                    <option value="custom">Custom</option> <!-- Lowercase value -->
+                </select>
+                
+                <label for="type">Select Type:</label>
+                <select id="type" required>
+                    <option value="Fresh">Fresh</option>
+                    <option value="Frozen">Frozen</option>
+                    <option value="Organic">Organic</option>
+                </select>
+
+                <div id="customWeightInput" style="display: none;">
+                    <label for="customWeight">Enter Custom Weight (grams):</label>
+                    <input type="number" id="customWeight" min="1">
+                </div>
+
+                <label for="quantity">Enter Quantity:</label>
+                <input type="number" id="quantity" min="1" required>
+
+                <button type="button" id="addPackageBtn">Add List</button>
+            </form>
+
+            <h3>Packaging Summary</h3>
+            <ul id="packagingSummary"></ul>
+            <button id="checkPackagingBtn">Check and Package</button>
+        </section>
+
+        <!-- Pricing Structure Section -->
+        <section id="pricingSection">
+            <h2>Pricing Structure</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Weight (grams)</th>
+                        <th>Price Per Category ($)</th>
+                        <th>Actions</th>
+
+                        <!-- add edit part to change the price  -->
+                    </tr>
+                </thead>
+                <tbody id="pricingTable"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Blueberry Factory Management System &copy; 2024</p>
+      </footer>
+</body>
+
+</html>

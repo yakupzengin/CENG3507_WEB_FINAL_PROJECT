@@ -1,0 +1,309 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header & Navigation Styles */
+header {
+  background: linear-gradient(135deg, #2c3e50, #616466, #2c3e50);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+h2 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+/* Main Content Layout */
+main {
+  padding: 2rem;
+}
+
+/* Section Common Styles */
+.farmer-section,
+.purchase-section,
+.expense-section,
+.report-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  /* border-bottom: 3px solid #2c3e50; */
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title .icon {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+
+/* Form Styles */
+form {
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ccc;
+  margin-bottom: 2rem;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#purchaseForm select {
+  width: -webkit-fill-available;
+}
+
+/* Select Input Styles */
+select {
+  padding: 0.5rem;
+  width: fit-content;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Button Styles */
+button,
+form button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+tfoot {
+  font-weight: bold;
+  background-color: #f7f9fc;
+}
+
+/* Search Results Styles */
+.search-results {
+  margin-top: 1rem;
+}
+
+.search-results .result-item {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Expense Calculator Styles */
+.expense-calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expense-summary {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Transaction List Styles */
+#transactionList {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+#transactionList h4 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Cost Report Styles */
+.cost-report-generator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+    /* Make text smaller */
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+    /* Prevent text from breaking into multiple lines */
+  }
+
+  form input,
+  form button {
+    width: 100%;
+    /* Ensure input and buttons span the full width */
+  }
+
+
+
+  footer {
+    padding: 0.8rem 0;
+  }
+
+  /* Adjust layout for mobile screens */
+  #purchaseList,
+  #farmerList,
+  #purchaseListFiltered {
+    margin-top: 1rem;
+  }
+
+  /* Adjust buttons */
+  form button {
+    padding: 0.7rem;
+  }
+  
+
+  #deleteFarmerBtn,
+  #filterFarmerBtn,
+  #filterDateBtn,
+  #searchFarmerBtn {
+    width: 100%;
+    /* Make filter buttons full width on mobile */
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title .icon {
+    font-size: 1.6rem;
+  }
+
+
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  header nav a {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav a {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    display: block;
+    /* Stack nav items vertically on small screens */
+    margin: 5px 0;
+  }
+
+
+  footer {
+    font-size: 14px;
+    /* Adjust footer font size for smaller screens */
+  }
+
+  /* Optimize form inputs */
+  form input {
+    font-size: 14px;
+  }
+
+  form button {
+    font-size: 14px;
+  }
+}

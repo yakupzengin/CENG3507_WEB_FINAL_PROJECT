@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplier Management</title>
+  <link rel="stylesheet" href="../styles/supplier.css">
+  <link rel="stylesheet" href="../styles/header.css">
+
+  <script src="../scripts/supplier.js" defer></script>
+</head>
+  
+<body>
+  <!-- Header part -->
+  <header>
+    <h1>Supplier Management</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="supplier.html">Supplier</a>
+      <a href="packaging.html">Packaging</a>
+      <a href="sales.html">Sales</a>
+      <a href="financial.html">Financial</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="report.html">Report</a>
+    </nav>
+  </header>
+
+  <!-- Main part -->
+  <main>
+
+    <!-- Add Farmer part -->
+    <section class="farmer-section">
+      <h2 class="section-title"> Farmer Registry & Management</h2>
+
+      <!-- Add Form -->
+      <form id="farmerForm">
+        <input type="hidden" id="farmerID">
+        <label for="farmerName">Farmer Name</label>
+        <input type="text" id="farmerName" placeholder="Farmer Name" required>
+        <label for="farmerPhone">Phone</label>
+        <input type="number" id="farmerPhone" placeholder="Phone" required>
+        <label for="farmerEmail">Email</label>
+        <input type="email" id="farmerEmail" placeholder="Email" required>
+        <label for="farmerCountry">Country</label>
+        <input type="text" id="farmerCountry" placeholder="Country" required>
+        <label for="farmerCity">City</label>
+        <input type="text" id="farmerCity" placeholder="City" required>
+        <button type="submit">Add/Update Farmer</button>
+      </form>
+
+      <button id="deleteFarmerBtn">Delete Farmer by ID</button>
+      
+      <div id="farmerList"></div>
+      
+      <!-- Search form -->
+      <form>
+        <label for="searchFarmer">Search Farmer</label>
+        <input type="text" id="searchFarmer" placeholder="Search Farmer by Name, City, or Country">
+        <button id="searchFarmerBtn">Search</button>
+      </form>
+
+      <!-- Search results -->
+      <div id="farmerListSearched" class="search-results"></div>
+
+    </section>
+
+    <!-- Purchase part -->
+    <section class="purchase-section">
+      <h2 class="section-title">Raw Material</h2>
+
+      <form id="purchaseForm">
+        <label for="purchaseFarmerID">Farmer ID (Linked)</label>
+        <select id="purchaseFarmerID" required></select>
+        <label for="purchaseDate">Date</label>
+        <input type="date" id="purchaseDate" required>
+        <label for="quantity">Quantity (kg)</label>
+        <input type="number" id="quantity" placeholder="Quantity (kg)" min="0" required>
+        <label for="pricePerKg">Price per Kg</label>
+        <input type="number" id="pricePerKg" placeholder="Price per Kg" min="0" required>
+        <p id="totalCost">Total Purchase Cost: $0.00</p>
+        <button type="submit" id="submitPurchase">Log Purchase</button>
+      </form>
+
+      <div id="purchaseList"></div>
+
+      <form>
+        <h3>Filter Purchases</h3>
+        <label for="filterFarmerID">By Farmer ID</label>
+        <input type="text" id="filterFarmerID" placeholder="Filter by Farmer">
+        <button id="filterFarmerBtn">Filter</button>
+        <label for="filterDateStart">Start Date</label>
+        <input type="date" id="filterDateStart">
+        <label for="filterDateEnd">End Date</label>
+        <input type="date" id="filterDateEnd">
+        <button id="filterDateBtn">Filter by Date</button>
+      </form>
+      <div id="purchaseListFiltered"></div>
+
+    </section>
+
+    <!-- Expense part -->
+    <section class="expense-section">
+      <h2 class="section-title"> Cost Analysis </h2>
+      <div class="expense-calculator">
+        <div class="period-selector">
+          <label for="expensePeriod">Select Period:</label>
+          <select id="expensePeriod">
+            <option value="daily">Today's Transactions</option>
+            <option value="weekly">Last 7 Days</option>
+            <option value="monthly">Last 30 Days</option>
+            <option value="yearly">Last 365 Days</option>
+          </select>
+          <button id="calculateExpenseBtn">Calculate Expenses</button>
+        </div>
+        <div class="expense-summary">
+          <h3>Expense Summary</h3>
+          <div id="expenseResults">
+            <p>Total Purchase Cost: $<span id="periodTotalCost">0.00</span></p>
+            <p>Total Quantity: <span id="periodTotalQuantity">0</span> kg</p>
+            <p>Average Price per kg: $<span id="periodAveragePrice">0.00</span></p>
+          </div>
+          <div id="transactionList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Report part -->
+    <section class="report-section">
+      <h2 class="section-title"> Report Part</h2>
+      <div class="cost-report-generator">
+        <div class="report-controls">
+          <select id="reportType">
+            <option value="summary">Summary Report</option>
+            <option value="detailed">Detailed Report By Farmer</option>
+            <option value="comparison">Cost Comparison (Month - Year)</option>
+          </select>
+          <div class="date-range">
+            <input type="date" id="reportStartDate">
+            <input type="date" id="reportEndDate">
+          </div>
+          <button id="generateCostReport">Generate Report</button>
+        </div>
+        <div id="costReportResults" class="report-container">
+          <!-- Report content will be inserted here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Blueberry Factory Management System &copy; 2024</p>
+  </footer>
+</body>
+
+</html>
